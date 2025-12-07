@@ -38,19 +38,23 @@ export default function History(){
 
                 <View style={styles.historico}>
 
+                    {historico == '' && <View style={styles.vazio}> <Text style={{fontWeight: 'bold'}}>Nenhuma tentativa registrada!</Text>  </View>} 
+
 
                     {historico.map((item, i) => (
-                    <View >
                         <Text key={i} style={[item.correto ? styles.correto : styles.errado]}>
-                            {item.texto} - {item.correto ? "✔️" : "❌"}
+                            {i + 1}: {item.texto} - {item.correto ? "✔️" : "❌"}
                         </Text>
-                    </View>
                     ))}
 
 
                 </View>
                 <TouchableOpacity style={styles.botaoRodarPokemon} onPress={() => router.push("/GameScreen")}>
                     <Text style={styles.btnText}>Voltar</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.botaoRodarPokemon} onPress={async () => await AsyncStorage.clear()}>
+                    <Text style={styles.btnText}>Limpar</Text>
                 </TouchableOpacity>
 
             </View>

@@ -84,7 +84,6 @@ export const styles = StyleSheet.create({
 
     },
     errado:{
-        justifyContent: "space-around",
         backgroundColor: "#ff693c3b",
         borderRadius: 10,
         padding: 5,
@@ -94,6 +93,14 @@ export const styles = StyleSheet.create({
     historicoItem:{
         height: 15,
         justifyContent: "space-evenly"
+    },
+    vazio:{
+        margin: 'auto',
+        height: '50%',
+        width: "auto",
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 15,
     }
 
     

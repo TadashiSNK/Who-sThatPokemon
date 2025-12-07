@@ -98,9 +98,7 @@ export default function GameScreen() {
             <Stack.Screen options={{ headerShown: false }} />
             <View style={styles.safearea}>
 
-                <TouchableOpacity style={styles.botaoRodarPokemon} onPress={() => router.push("/History")}>
-                    <Text style={styles.btnText}>Historico</Text>
-                </TouchableOpacity>
+                
 
                 {pokeJson ? <PokemonDisplay acertou={acertou} json={pokeJson} /> 
                             : <View style={styles.pokemonView}><Image style={styles.awaitIMG} source={NULLIMG}></Image></View>}
@@ -125,6 +123,10 @@ export default function GameScreen() {
                 <TouchableOpacity style={styles.botaoRodarPokemon} onPress={chutar}>
                     <Text style={styles.btnText}>Chutar</Text>
                 </TouchableOpacity>}
+
+                <TouchableOpacity style={styles.botaoRodarPokemon} onPress={() => router.push("/History")}>
+                    <Text style={styles.btnText}>Historico</Text>
+                </TouchableOpacity>
 
 
 
